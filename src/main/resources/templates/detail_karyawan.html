@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Demo CRUD Karyawan PT EDI</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 th:text="${msg_info}"></h2>
+        <br>
+        <div class="card" style="width: 35rem;">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${karyawan.nama}"></h5>
+                <p class="card-text">Melamar sebagai : <span th:text="${karyawan.posisi}"></span></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email : <span th:text="${karyawan.email}"></span></li>
+                <li class="list-group-item">Tempat Tanggal Lahir :
+                    <span th:text="${karyawan.tempat_lahir}"></span>,
+                    <span th:text="${karyawan.tgl_lahir}"></span>
+                </li>
+                <li class="list-group-item">Jenis Kelamin : <span th:text="${karyawan.jns_kelamin}"></span></li>
+                <li class="list-group-item">Agama : <span th:text="${karyawan.agama}"></span></li>
+                <li class="list-group-item">Golongan Darah : <span th:text="${karyawan.gol_darah}"></span></li>
+                <li class="list-group-item">Status Pernikahan : <span th:text="${karyawan.stat_pernikahan}"></span></li>
+                <li class="list-group-item">Alamat KTP : <span th:text="${karyawan.alm_ktp}"></span></li>
+                <li class="list-group-item">Alamat Tinggal : <span th:text="${karyawan.alm_tinggal}"></span></li>
+                <li class="list-group-item">No Telp : <span th:text="${karyawan.no_telp}"></span></li>
+                <li class="list-group-item">Kontak Darurat : <span th:text="${karyawan.kontak_darurat}"></span></li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Kembali</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="webjars/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+
+</html>
